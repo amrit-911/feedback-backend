@@ -1,0 +1,96 @@
+### Register
+POST http://localhost:8000/api/register
+Content-Type: application/json
+
+{
+    "email":"amritd637",
+    "password":"12345",
+    "name":"Amrit11",
+    "mobile": 1234567890
+}
+
+### Login
+POST http://localhost:8000/api/login
+Content-Type: application/json
+    
+{
+    "email":"amrit6",
+    "password":"12345"
+}
+
+### Authentication 
+
+POST http://localhost:8000/api/user/amrit6
+Content-Type: application/json
+
+{
+   "token" :  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtcml0NiIsInBhc3N3b3JkIjoiMTIzNDUiLCJpYXQiOjE2ODY0MTI5MDYsImV4cCI6MTY4NjQ0ODkwNn0.ymJz1Tk2vxrCvICtjVR5QVIy24VnwjPnZU5wEkJwius"
+}
+
+
+##################################################################################
+############## PRODUCT APIS ######################################################
+##################################################################################
+
+
+### Product List
+
+GET http://localhost:8000/api/products
+Content-Type: application/json
+
+### Create Product
+
+POST http://localhost:8000/api/products/new
+Content-Type: application/json
+
+ {
+            "comapnyName":"vrushti 😘",
+            "category":["datatech"],
+            "logoUrl":".logo",
+            "productLink":"Bijus.com",
+            "description":"a software company",
+            "comments":["Good Product","Great"],
+            "commentNumber":15,
+            "upvote":4
+             }
+
+### Sort
+GET http://localhost:8000/api/products/Upvotes
+
+### Suggestions
+
+GET http://localhost:8000/api/products/suggestions
+Content-Type: application/json
+
+### Upvote
+
+POST  http://localhost:8000/api/products/:id/upvote
+Content-Type: application/json
+
+{
+    "upvote": 40
+}
+
+### Add Comments
+
+POST  http://localhost:8000/api/products/647edcc3566b735ffa48f18e/addcomment
+Content-Type: application/json
+
+{
+    "comments": ["dasfdc  adsf ","fdas fdafcds af","f asdf ","dasdasd asd as"]
+}
+
+
+### get details of the product 
+
+Get http://localhost:8000/api/products/edit/6485b7f6ffc89fb842e1975a
+Content-Type: application/json
+
+### Edit / Modify product
+
+POST http://localhost:8000/api/products/edit/6485b7f6ffc89fb842e1975a
+Content-Type: application/json
+
+{
+    "comapnyName":"vrushtiiiaai"
+}
